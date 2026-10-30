@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINOS-741</title>
+<meta name="description" content="MINOS-741: native dj software for macos. download, updates, help.">
+<link rel="icon" href="data:,">
+<style>
+@font-face { font-family:"Cinzel"; src:url("assets/fonts/Cinzel.ttf") format("truetype"); font-weight:400 900; font-display:swap }
+@font-face { font-family:"IBM Plex Mono"; src:url("assets/fonts/IBMPlexMono-Regular.ttf") format("truetype"); font-weight:400; font-display:swap }
+@font-face { font-family:"IBM Plex Mono"; src:url("assets/fonts/IBMPlexMono-SemiBold.ttf") format("truetype"); font-weight:600; font-display:swap }
+:root {
+  --void:#040303; --chitin:#0d0a0a; --bone:#e6e1da; --mute:#9b8f86; --low:#6f645c;
+  --red:#d21f26; --hair:#2a1113; --ash:#1c1617;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace; --serif:"Cinzel", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing:border-box }
+body { margin:0; background:var(--void); color:var(--bone); font:14px/1.65 var(--mono) }
+a { color:var(--bone); text-decoration-color:var(--red); text-underline-offset:3px; overflow-wrap:anywhere }
+a:hover { color:var(--red) }
+code, pre { font:inherit; font-size:13px }
+pre { background:var(--chitin); border:1px solid var(--hair); padding:12px 14px; margin:8px 0 14px; overflow-x:auto; color:var(--bone) }
+code { color:var(--bone) }
+p, li { max-width:72ch; color:#cfc8bf }
+p { margin:0 0 10px }
+ul { margin:0 0 12px; padding-left:20px }
+li { margin:4px 0 }
+li::marker { color:var(--red) }
+
+main { max-width:760px; margin:0 auto; padding:24px max(18px, env(safe-area-inset-right, 0px)) 72px max(18px, env(safe-area-inset-left, 0px)) }
+.banner { margin:0 0 6px }
+.banner img { display:block; width:100%; height:auto; border:1px solid var(--hair) }
+.tagline { margin:14px 0 0; font-size:15px; color:var(--bone) }
+
+section { padding:26px 0; border-top:1px solid var(--ash) }
+h2 { font:600 18px/1.2 var(--serif); letter-spacing:.14em; margin:0 0 14px; display:flex; gap:12px; align-items:baseline }
+h2 i { color:var(--red); font:600 14px var(--mono); font-style:normal }
+h3 { font:600 12px var(--mono); letter-spacing:.12em; color:var(--mute); text-transform:uppercase; margin:18px 0 6px }
+.meta { color:var(--low); font-size:12.5px }
+
+.btn { display:inline-block; margin:4px 0 12px; padding:12px 20px; background:var(--chitin); border:1px solid var(--red); color:var(--bone);
+  font:600 14px var(--mono); letter-spacing:.06em; text-decoration:none; max-width:100%; overflow-wrap:anywhere }
+.btn:hover { background:var(--red); color:var(--bone) }
+
+.fig { margin:18px 0 0 }
+.fig img { display:block; width:100%; height:auto; border:1px solid var(--hair); background:#000 }
+figcaption { font-size:11px; color:var(--low); letter-spacing:.08em; margin:8px 0 0 }
+
+.links { list-style:none; padding:0; margin:0 }
+.links li { margin:6px 0; padding-left:0; max-width:none }
+.links li::marker { content:"" }
+.links span { color:var(--low); display:inline-block; min-width:110px }
+
+.legal { border:1px solid var(--hair); background:var(--chitin); padding:14px 16px; margin:0 0 14px; max-width:none; color:var(--bone) }
+.credits { font-size:12.5px; color:var(--mute) }
+
+footer { margin-top:30px; padding-top:14px; border-top:1px solid var(--ash); font-size:11px; color:var(--low); letter-spacing:.08em }
+
+@media (max-width: 520px) {
+  body { font-size:13px }
+  main { padding-top:16px }
+  h2 { font-size:16px }
+  .btn { display:block; text-align:center }
+  .links span { display:block; min-width:0 }
+}
+</style>
+</head>
+<body>
+<main>
+
+<header class="banner">
+  <img src="assets/banner.svg" alt="MINOS-741" width="1280" height="360">
+  <p class="tagline">native dj software for macos.</p>
+</header>
+
+<section id="download">
+  <h2><i>◆</i> DOWNLOAD</h2>
+  <p><a class="btn" href="https://github.com/Slayer7411/MINOS-741-releases/releases/download/latest-build/MINOS-741.dmg">download MINOS-741.dmg</a></p>
+  <p class="meta">needs macos 15+, apple silicon or intel. <a href="https://github.com/Slayer7411/MINOS-741-releases/releases">all releases</a></p>
+
+  <h3>homebrew</h3>
+  <pre><code>brew install --cask slayer7411/tap/minos-741</code></pre>
+
+  <h3>first start</h3>
+  <p>not signed by apple -&gt; first start: system settings -&gt; privacy &amp; security -&gt; OPEN ANYWAY.</p>
+</section>
+
+<section id="updates">
+  <h2><i>◆</i> UPDATES</h2>
+  <p>the app updates itself. channel: ⌘, -&gt; ANZEIGE -&gt; Updates.</p>
+  <ul>
+    <li><b>newest build</b> (default): every build of main, rolling release <a href="https://github.com/Slayer7411/MINOS-741-releases/releases/tag/latest-build">latest-build</a></li>
+    <li><b>stable versions</b>: only the named releases vX.Y.Z</li>
+  </ul>
+</section>
+
+<section id="features">
+  <h2><i>◆</i> FEATURES</h2>
+  <ul>
+    <li>two browser panes side by side or stacked, each with own source, search, sort, tag filter and columns</li>
+    <li>tags live in comment 2 of the collection, so they travel with the library</li>
+    <li>audio unit (v2 / v3) and VST3 effects in fx insert slots, up to 6 in series per unit</li>
+    <li>audio units can run isolated in a separate service: a crashing plugin does not take the audio down</li>
+  </ul>
+  <p class="meta">everything it does -&gt; <a href="https://slayer7411.github.io/MINOS-741/guide/">user guide</a></p>
+  <figure class="fig">
+    <img src="assets/screenshot.png" alt="MINOS-741 with 4 decks, external mixer mode and dual browser" width="2000" height="1315" loading="lazy">
+    <figcaption>4 decks, dual browser</figcaption>
+  </figure>
+</section>
+
+<section id="help">
+  <h2><i>◆</i> HELP</h2>
+  <ul class="links">
+    <li><span>user guide</span> <a href="https://slayer7411.github.io/MINOS-741/guide/">slayer7411.github.io/MINOS-741/guide/</a></li>
+    <li><span>bugs and ideas</span> <a href="https://github.com/Slayer7411/MINOS-741-releases/issues">github issues</a></li>
+    <li><span>sets</span> <a href="https://soundcloud.com/minos-741">soundcloud.com/minos-741</a></li>
+    <li><span>instagram</span> <a href="https://www.instagram.com/minos_741/">@minos_741</a></li>
+  </ul>
+</section>
+
+<section id="license">
+  <h2><i>◆</i> LICENSE</h2>
+  <p class="legal">GPL-2.0-or-later. this repository holds builds only. complete corresponding source code of any build is available on request for three years from that build's release -&gt; <a href="https://github.com/Slayer7411/MINOS-741-releases/issues">open an issue</a>. name, ◆ mark and logo stay with the author.</p>
+  <p class="credits">full text: <a href="LICENSE.md">LICENSE.md</a>. third party: link library (GPL-2.0-or-later), signalsmith-stretch and signalsmith-linear (MIT), VST 3 SDK hosting part (MIT), cinzel and ibm plex mono fonts (SIL open font license 1.1, <a href="assets/fonts/OFL-Cinzel.txt">cinzel</a>, <a href="assets/fonts/OFL-IBMPlexMono.txt">ibm plex mono</a>). VST is a registered trademark of Steinberg Media Technologies GmbH. all notices ship inside the app bundle.</p>
+</section>
+
+<footer>&copy; 2026 Slayer7411</footer>
+
+</main>
+</body>
+</html>
